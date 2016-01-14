@@ -1,0 +1,34 @@
+{
+   "manifest_version": 2,
+   "name": "Git merge request",
+   "version": "3.7.3.20",
+
+   "icons": {
+      "16": "git.png",
+      "32": "git.png",
+      "48": "git.png",
+      "64": "git.png"
+   },
+
+   "content_scripts": [
+      {
+         "matches": [ "https://git.sbis.ru/root/sbis3-ws/merge_requests/*", "https://git.sbis.ru/root/sbis3-controls/merge_requests/*", "https://git.sbis.ru/root/sbis3-app-engine/merge_requests/*"],
+         "js": ["jquery-min.js", "merge-request.js"],
+         "css": ["merge-request.css", "main-page.css"]
+      },
+      {
+         "matches": [ "https://git.sbis.ru/"],
+         "js": ["jquery-min.js", "main-page.js"],
+         "css": ["main-page.css"]
+      }
+   ],
+
+   "permissions": [
+      "tabs"
+   ],
+
+   "browser_action": {
+      "default_title": "Create merge requests 3.7.3.20",
+      "default_icon": "git.png"
+   }
+}

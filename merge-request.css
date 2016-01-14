@@ -1,0 +1,20 @@
+.ws-mr-already-merged {
+   background-color: #CCCCCC !important;
+}
+
+.ws-mr-not-merged {
+   background-color: #FFCC66 !important;
+}
+
+.ws-mr-merged {
+   background-color: #99FFCC !important;
+}
+
+.ws-button.plus1 {
+   width: 100px;
+   margin-bottom: 4px;
+}
+
+.merge-request-details .label-branch:last-child {
+   background-color: yellow;
+}
