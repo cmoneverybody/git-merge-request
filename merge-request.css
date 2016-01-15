@@ -1,12 +1,12 @@
-.ws-mr-already-merged {
+.ws-mr-already-merged .mr-state-widget {
    background-color: #CCCCCC !important;
 }
 
-.ws-mr-not-merged {
+.ws-mr-not-merged .mr-state-widget {
    background-color: #FFCC66 !important;
 }
 
-.ws-mr-merged {
+.ws-mr-merged .mr-state-widget {
    background-color: #99FFCC !important;
 }
 

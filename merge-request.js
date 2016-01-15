@@ -7,7 +7,7 @@ $(document).ready(function() {
       plus1 = $('<div class="ws-button plus1">+1 без тестов</div>'),
       mrText = $('#note_note'),
       mrForm = mrText.parents('form');
-   mrState.addClass(mrMerged ? 'ws-mr-already-merged' : mrError ? 'ws-mr-not-merged' : 'ws-mr-merged');
+   $('body').addClass(mrMerged ? 'ws-mr-already-merged' : mrError ? 'ws-mr-not-merged' : 'ws-mr-merged');
    if (plus1Target.length) {
       plus1.click(function() {
          mrText.html('+1 без тестов');
