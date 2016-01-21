@@ -5,7 +5,7 @@ $(document).ready(function() {
       mrMerged = !!mrState.find('.author_link').length,
       plus1Target = $('.voting_notes'),
       plus1 = $('<div class="ws-button plus1">+1 без тестов</div>'),
-      mrText = $('#note_note'),
+      mrText = $('.js-main-target-form .note_text'),
       mrForm = mrText.parents('form');
    $('body').addClass(mrMerged ? 'ws-mr-already-merged' : mrError ? 'ws-mr-not-merged' : 'ws-mr-merged');
    if (plus1Target.length) {
