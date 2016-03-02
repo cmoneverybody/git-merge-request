@@ -9,9 +9,7 @@ $(document).ready(function() {
       container
          .prepend('<a class="ws-button" target="_blank" href=' + url.replace(replaced, 'development') + '>dev</a>')
          .prepend('<a class="ws-button" target="_blank" href=' + url.replace(replaced, 'rc-3.7.4') + '>3.7.4</a>')
-         .prepend('<a class="ws-button" target="_blank" href=' + url.replace(replaced, 'rc-3.7.3.100') + '>3.7.3.100</a>')
-         .prepend('<a class="ws-button" target="_blank" href=' + url.replace(replaced, 'release-3.7.3.100.R1') + '>3.7.3.100.R1</a>')
-         .prepend('<a class="ws-button" target="_blank" href=' + url.replace(replaced, 'rc-3.7.3.30') + '>3.7.3.30</a>')
-         .prepend('<a class="ws-button" target="_blank" href=' + url.replace(replaced, 'rc-3.7.3.20') + '>3.7.3.20</a>');
+         .prepend('<a class="ws-button" target="_blank" href=' + url.replace(replaced, 'rc-3.7.3.140') + '>3.7.3.140</a>')
+         .prepend('<a class="ws-button" target="_blank" href=' + url.replace(replaced, 'rc-3.7.3.100') + '>3.7.3.100</a>');
    }
 });
