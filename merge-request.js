@@ -4,7 +4,7 @@ $(document).ready(function() {
       mrError = !!mrState.find('.fa-exclamation-triangle').length,
       mrMerged = !!mrState.find('.author_link').length,
       plus1Target = $('.voting_notes'),
-      plus1 = $('<div class="ws-button plus1">+1 без тестов</div>'),
+      plus1 = $('<div class="ws-button plus1" style="width: 70px;">+ 1</div>'),
       mrText = $('.js-main-target-form .note_text'),
       mrForm = mrText.parents('form'),
       jenkinsConst = 'http://test-jenkins/job/sbis3-controls_',
@@ -18,7 +18,7 @@ $(document).ready(function() {
    $('body').addClass(mrMerged ? 'ws-mr-already-merged' : mrError ? 'ws-mr-not-merged' : 'ws-mr-merged');
    if (plus1Target.length) {
       plus1.click(function() {
-         mrText.html('+1 без тестов');
+         mrText.html('+1');
          mrText.parents('form').submit();
       });
       plus1.prependTo(plus1Target);
