@@ -11,6 +11,7 @@ $(document).ready(function() {
          .prepend('<a class="ws-button" target="_blank" href=' + url.replace(replaced, 'rc-3.7.4.100') + '>3.7.4.100</a>')
          .prepend('<a class="ws-button" target="_blank" href=' + url.replace(replaced, 'rc-3.7.4') + '>3.7.4</a>')
          .prepend('<a class="ws-button" target="_blank" href=' + url.replace(replaced, 'rc-3.7.3.200') + '>3.7.3.200</a>')
+         .prepend('<a class="ws-button" target="_blank" href=' + url.replace(replaced, 'rc-3.7.3.160') + '>3.7.3.160</a>')
          .prepend('<a class="ws-button" target="_blank" href=' + url.replace(replaced, 'rc-3.7.3.150') + '>3.7.3.150</a>');
    }
 });
