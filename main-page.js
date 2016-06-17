@@ -10,6 +10,7 @@ $(document).ready(function() {
          .prepend('<a class="ws-button" target="_blank" href=' + url.replace(replaced, 'development') + '>dev</a>')
          .prepend('<a class="ws-button" target="_blank" href=' + url.replace(replaced, 'rc-3.7.4.100') + '>3.7.4.100</a>')
          .prepend('<a class="ws-button" target="_blank" href=' + url.replace(replaced, 'rc-3.7.4') + '>3.7.4</a>')
+         .prepend('<a class="ws-button" target="_blank" href=' + url.replace(replaced, 'rc-3.7.3.210') + '>3.7.3.210</a>')
          .prepend('<a class="ws-button" target="_blank" href=' + url.replace(replaced, 'rc-3.7.3.200') + '>3.7.3.200</a>');
    }
 });
