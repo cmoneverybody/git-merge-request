@@ -6,7 +6,7 @@ $(document).ready(function() {
       replaced;
    if (container.length) {
       url = container.find('.btn').attr('href');
-      url.search(/(?:target_branch%5D=)([^&]+)/gim, function(res, branch) {
+      url.replace(/(?:target_branch%5D=)([^&]+)/gim, function(res, branch) {
           replaced = branch;
       });
       container.prepend('<a class="ws-button" target="_blank" href=' + url.replace(replaced, 'development') + '>dev</a>');
