@@ -4,7 +4,7 @@ $(document).ready(function() {
       container = $('.event-last-push .pull-right'),
       url,
       replaced,
-      createRequest = $('<div class="ws-create-request" title="Create another request"><i class="ws-create-request-button fa fa-pencil-square-o"</i></div>'),
+      createRequest = $('<div class="ws-create-request"><i title="Create another request" class="ws-create-request-button fa fa-pencil-square-o"</i></div>'),
       rp1 = 'https://git.sbis.ru/sbis/controls/merge_requests/new?utf8=✓&merge_request[source_project_id]=143&merge_request[source_branch]=',
       rp2 = '&merge_request[target_project_id]=143&merge_request[target_branch]=';
       createRequest
