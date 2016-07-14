@@ -1,6 +1,6 @@
 $(document).ready(function() {
    var
-      branches = ['3.7.4.100', '3.7.4', '3.7.3.230', '3.7.3.220'],
+      branches = ['3.7.4.200', '3.7.4.100', '3.7.4', '3.7.3.230'],
       container = $('.event-last-push .pull-right'),
       url,
       replaced;
