@@ -48,3 +48,40 @@
    cursor: pointer;
    text-decoration: none;
 }
+
+.ws-create-request {
+   width: 32px;
+   display: table-cell;
+   vertical-align: middle;
+   text-align: center;
+}
+
+.ws-create-request-button {
+   color: #31af64;
+   cursor: pointer;
+}
+
+.ws-create-request-button:hover {
+   color: rgb(255, 210, 0);
+}
+
+.ws-create-request-button:active {
+   color: rgb(255, 160, 0);
+}
+
+.ws-create-request-frame {
+    background-color: white;
+    border: 1px solid #e7e9ed;
+    position: absolute;
+    z-index: 99999;
+    padding: 8px;
+}
+
+.ws-branch-name {
+   width: 100%;
+   padding: 2px;
+}
+
+.ws-create-request-links {
+   margin-top: 8px;
+}
