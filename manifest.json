@@ -12,7 +12,7 @@
 
    "content_scripts": [
       {
-         "matches": ["https://git.sbis.ru/sbis/controls/merge_requests/*", "https://git.sbis.ru/root/sbis3-app-engine/merge_requests/*"],
+         "matches": ["https://git.sbis.ru/sbis/controls/merge_requests/*", "https://git.sbis.ru/sbis/ws/merge_requests/*", "https://git.sbis.ru/root/sbis3-app-engine/merge_requests/*"],
          "js": ["jquery-min.js", "merge-request.js"],
          "css": ["merge-request.css", "main-page.css"]
       },

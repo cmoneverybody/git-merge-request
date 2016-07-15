@@ -22,3 +22,20 @@
 .wiki > p {
    white-space: pre !important;
 }
+
+.ws-copy-link {
+   left: 50%;
+   top: 14px;
+   cursor: pointer;
+   font-size: 2em !important;
+   position: absolute;
+   z-index: 99999;
+}
+
+.ws-copy-link:hover {
+   color: rgb(255, 210, 0);
+}
+
+.ws-copy-link:active {
+   color: rgb(255, 160, 0);
+}
