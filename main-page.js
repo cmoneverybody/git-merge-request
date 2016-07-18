@@ -21,7 +21,6 @@ $(document).ready(function() {
             .appendTo('body')
             .css(pos);
          requestContainer = $('.ws-create-request-links');
-         requestContainer.prepend('<a class="ws-button" branch="development">dev</a>');
          for (var i = 0; i < branches.length; i++) {
             requestContainer.prepend('<a class="ws-button" branch="rc-' + branches[i] + '">' + branches[i] + '</a>');
          }
@@ -57,7 +56,6 @@ $(document).ready(function() {
       url.replace(/(?:target_branch%5D=)([^&]+)/gim, function(res, branch) {
           replaced = branch;
       });
-      container.prepend('<a class="ws-button" target="_blank" href=' + url.replace(replaced, 'development') + '>dev</a>');
       for (var i = 0; i < branches.length; i++) {
          container.prepend('<a class="ws-button" target="_blank" href=' + url.replace(replaced, 'rc-' + branches[i]) + '>' + branches[i] + '</a>')
       }
