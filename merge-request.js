@@ -7,7 +7,7 @@ $(document).ready(function() {
       plus1 = $('<div class="ws-button plus1" style="width: 70px;">+ 1</div>'),
       mrText = $('.js-main-target-form .note_text'),
       mrForm = mrText.parents('form'),
-      jenkinsConst = 'http://test-jenkins/job/sbis3-controls_',
+      jenkinsConst = 'http://test-jenkins/job/' + (document.location.href.indexOf('/ws/data/') ? 'ws.data' : 'sbis3-controls')  + '_',
       jenkinsMiddle = '/branch/'
       jenkinsIconConst = '/badge/icon',
       branch = $('.mr-source-target .label-branch:first').html(),
