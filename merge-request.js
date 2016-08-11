@@ -7,7 +7,7 @@ $(document).ready(function() {
       plus1 = $('<div class="ws-button plus1" style="width: 70px;">+ 1</div>'),
       mrText = $('.js-main-target-form .note_text'),
       mrForm = mrText.parents('form'),
-      jenkinsConst = 'http://test-jenkins/job/' + (document.location.href.indexOf('/ws/data/') !== -1 ? 'ws.data' : 'sbis3-controls')  + '_',
+      jenkinsConst = 'http://test-jenkins/job/' + (document.location.href.indexOf('/ws/data/') !== -1 ? 'ws.data' : document.location.href.indexOf('/sbis/ws') ? 'ws' : 'sbis3-controls')  + '_',
       jenkinsMiddle = '/branch/'
       jenkinsIconConst = '/badge/icon',
       branch = $('.mr-source-target .label-branch:first').html(),
@@ -36,7 +36,5 @@ $(document).ready(function() {
       });
       plus1.prependTo(plus1Target);
    }
-   if (window.location.href.indexOf('/sbis/ws/') === -1) {
-      $('<div class="request-tests-block" style="margin: 16px 0;"><img src="http://test-jenkins/static/5661bc22/images/headshot.png" style="height: 24px; vertical-align: top; padding-right: 8px;"><a href="' + testURL + '" style="color: #3084bb; font-weight: bold; display: inline-block; font-size: 16px; padding-right: 8px;">Jenkins tests</a><img src="' + testIconURL + '" style="display: inline-block; vertical-align: top;"></div>').insertAfter($('.merge-request .middle-block'));
-   }
+   $('<div class="request-tests-block" style="margin: 16px 0;"><img src="http://test-jenkins/static/5661bc22/images/headshot.png" style="height: 24px; vertical-align: top; padding-right: 8px;"><a href="' + testURL + '" style="color: #3084bb; font-weight: bold; display: inline-block; font-size: 16px; padding-right: 8px;">Jenkins tests</a><img src="' + testIconURL + '" style="display: inline-block; vertical-align: top;"></div>').insertAfter($('.merge-request .middle-block'));
 });
