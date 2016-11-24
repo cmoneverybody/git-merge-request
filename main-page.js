@@ -21,9 +21,25 @@ $(document).ready(function() {
             .appendTo('body')
             .css(pos);
          requestContainer = $('.ws-create-request-links');
-         for (var i = 0; i < branches.length; i++) {
+         debugger;
+         $.getJSON("https://raw.githubusercontent.com/cmoneverybody/git-merge-request/master/config.json", function(data) {
+            debugger;
+            for (var i = 0; i < data.branches.length; i++) {
+               requestContainer.prepend('<a class="ws-button" branch="rc-' + data.branches[i] + '">' + data.branches[i] + '</a>');
+            }
+            if (container.length) {
+               url = container.find('.btn').attr('href');
+               url.replace(/(?:target_branch%5D=)([^&]+)/gim, function(res, branch) {
+                   replaced = branch;
+               });
+               for (var i = 0; i < data.branches.length; i++) {
+                  container.prepend('<a class="ws-button" target="_blank" href=' + url.replace(replaced, 'rc-' + data.branches[i]) + '>' + data.branches[i] + '</a>')
+               }
+            }
+         });
+         /*for (var i = 0; i < branches.length; i++) {
             requestContainer.prepend('<a class="ws-button" branch="rc-' + branches[i] + '">' + branches[i] + '</a>');
-         }
+         }*/
          window.createRequestFrame.fadeIn(200, function() {
             $('.ws-branch-name').focus()
          });
@@ -51,13 +67,4 @@ $(document).ready(function() {
          window.createRequestFrame = undefined;
       };
    }, true);
-   if (container.length) {
-      url = container.find('.btn').attr('href');
-      url.replace(/(?:target_branch%5D=)([^&]+)/gim, function(res, branch) {
-          replaced = branch;
-      });
-      for (var i = 0; i < branches.length; i++) {
-         container.prepend('<a class="ws-button" target="_blank" href=' + url.replace(replaced, 'rc-' + branches[i]) + '>' + branches[i] + '</a>')
-      }
-   }
 });
