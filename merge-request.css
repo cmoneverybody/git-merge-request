@@ -12,6 +12,13 @@
 
 .btn.plus1 {
    width: 70px;
+   background-color: #3777b0;
+   color: white;
+}
+
+.btn.plus1:hover, .btn.plus1:active {
+   background-color: #3788b0;
+   color: white;
 }
 
 .merge-request-details .label-branch:last-child {

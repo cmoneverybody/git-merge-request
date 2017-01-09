@@ -35,5 +35,5 @@ $(document).ready(function() {
       });
       plus1.prependTo(plus1Target);
    }
-   $('<div class="request-tests-block" style="margin: 16px 0;"><img src="http://test-jenkins/static/5661bc22/images/headshot.png" style="height: 24px; vertical-align: top; padding-right: 8px;"><a href="' + testURL + '" style="color: #3084bb; font-weight: bold; display: inline-block; font-size: 16px; padding-right: 8px;">Jenkins tests</a><img src="' + testIconURL + '" style="display: inline-block; vertical-align: top;"></div>').insertBefore($('.merge-request .mr-state-widget'));
+   $('<div class="request-tests-block" style="margin: 16px 0;"><img src="http://test-jenkins/static/5661bc22/images/headshot.png" style="height: 24px; vertical-align: top; padding-right: 8px;"><a href="' + testURL + '" style="font-weight: bold; display: inline-block; font-size: 16px; padding-right: 8px;">Jenkins tests</a><img src="' + testIconURL + '" style="display: inline-block; vertical-align: top;"></div>').insertBefore($('.merge-request .mr-state-widget'));
 });
