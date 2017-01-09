@@ -10,9 +10,8 @@
    background-color: #99FFCC !important;
 }
 
-.ws-button.plus1 {
-   width: 100px;
-   margin-bottom: 4px;
+.btn.plus1 {
+   width: 70px;
 }
 
 .merge-request-details .label-branch:last-child {
@@ -24,8 +23,8 @@
 }
 
 .ws-copy-link {
-   left: 50%;
-   top: 14px;
+   top: 4px;
+   left: 32px;
    cursor: pointer;
    font-size: 2em !important;
    position: absolute;
