@@ -11,7 +11,7 @@ $(document).ready(function() {
       rp2 = '&merge_request[target_project_id]=143&merge_request[target_branch]=',
       xhr = new XMLHttpRequest();
       createRequest
-         .prependTo($('.input-group'))
+         .prependTo($('.content-wrapper'))
          .find('i').click(function() {
             var
                pos = createRequest.find('i').offset(),
