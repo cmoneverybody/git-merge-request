@@ -55,7 +55,7 @@ $(document).ready(function() {
          branchField = $('.ws-branch-name');
          branchName = branchField.val();
          if (branchName) {
-            window.open(rp1 + branchName + rp2 + targetBranch,'_blank');
+            window.open(rp1 + branchName.trim() + rp2 + targetBranch,'_blank');
          } else {
             branchField.focus();
          }
