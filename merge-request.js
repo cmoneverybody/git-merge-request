@@ -7,7 +7,7 @@ $(document).ready(function() {
       plus1 = $('<div class="award-control btn plus1">+ 1</div>'),
       mrText = $('.js-main-target-form .js-note-text'),
       mrForm = mrText.parents('form'),
-      jenkinsConst = 'http://test-jenkins/job/' + (document.location.href.indexOf('/ws/data/') !== -1 ? 'ws.data' : document.location.href.indexOf('/sbis/ws') !== -1 ? 'ws' : 'sbis3-controls')  + '_',
+      jenkinsConst = 'http://ci-platform.sbis.ru/job/' + (document.location.href.indexOf('/ws/data/') !== -1 ? 'ws.data' : document.location.href.indexOf('/sbis/ws') !== -1 ? 'ws' : 'sbis3-controls')  + '_',
       jenkinsMiddle = '/branch/',
       jenkinsIconConst = '/badge/icon',
       branch = $('.mr-source-target .label-branch:first a').html(),
@@ -35,5 +35,5 @@ $(document).ready(function() {
       });
       plus1.prependTo(plus1Target);
    }
-   $('<div class="request-tests-block" style="margin: 16px 0;"><img src="http://test-jenkins/static/5661bc22/images/headshot.png" style="height: 24px; vertical-align: top; padding-right: 8px;"><a href="' + testURL + '" style="font-weight: bold; display: inline-block; font-size: 16px; padding-right: 8px;">Jenkins tests</a><img src="' + testIconURL + '" style="display: inline-block; vertical-align: top;"></div>').insertBefore($('.merge-request .mr-state-widget'));
+   $('<div class="request-tests-block" style="margin: 16px 0;"><img src="http://ci-platform.sbis.ru/static/5661bc22/images/headshot.png" style="height: 24px; vertical-align: top; padding-right: 8px;"><a href="' + testURL + '" style="font-weight: bold; display: inline-block; font-size: 16px; padding-right: 8px;">Jenkins tests</a><img src="' + testIconURL + '" style="display: inline-block; vertical-align: top;"></div>').insertBefore($('.merge-request .mr-state-widget'));
 });
