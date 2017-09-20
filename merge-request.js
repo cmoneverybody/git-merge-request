@@ -7,7 +7,7 @@ $(document).ready(function() {
       plus1 = $('<div class="award-control btn plus1">+ 1</div>'),
       mrText = $('.js-main-target-form .js-note-text'),
       mrForm = mrText.parents('form'),
-      jenkinsConst = 'http://ci-platform.sbis.ru/job/' + (document.location.href.indexOf('/ws/data/') !== -1 ? 'ws.data' : document.location.href.indexOf('/sbis/ws') !== -1 ? 'ws' : 'sbis3-controls')  + '_',
+      jenkinsConst = 'http://ci-platform.sbis.ru/job/' + (document.location.href.indexOf('/ws/data/') !== -1 ? 'sbis3-ws.data' : document.location.href.indexOf('/sbis/ws') !== -1 ? 'sbis3-ws' : 'sbis3-controls')  + '_',
       jenkinsMiddle = '/branch/',
       jenkinsIconConst = '/badge/icon',
       branch = $('.mr-source-target .label-branch:first a').html(),
