@@ -7,11 +7,11 @@ $(document).ready(function() {
       plus1 = $('<div class="award-control btn plus1">+ 1</div>'),
       mrText = $('.js-main-target-form .js-note-text'),
       mrForm = mrText.parents('form'),
-      jenkinsConst = 'http://ci-platform.sbis.ru/job/' + (document.location.href.indexOf('/ws/data/') !== -1 ? 'sbis3-ws.data' : document.location.href.indexOf('/sbis/ws') !== -1 ? 'sbis3-ws' : 'sbis3-controls')  + '_',
-      jenkinsMiddle = '/branch/',
-      jenkinsIconConst = '/badge/icon',
       branch = $('.mr-source-target .label-branch:first a').html(),
       rootBranch = branch.substring(0, branch.indexOf('/')),
+      jenkinsConst = 'http://ci-platform.sbis.ru/job/branch_' + (document.location.href.indexOf('/ws/data/') !== -1 ? 'ws.data' : document.location.href.indexOf('/sbis/ws') !== -1 ? 'ws' : 'controls')  + '_',
+      jenkinsMiddle = '/job/',
+      jenkinsIconConst = '/badge/icon',
       testURL = jenkinsConst + rootBranch + jenkinsMiddle + encodeURIComponent(branch),
       testIconURL = testURL + jenkinsIconConst;
    $('<div class="ws-copy-link fa fa-files-o" title="Copy merge request URL"></div>')
