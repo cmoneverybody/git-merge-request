@@ -3,13 +3,12 @@ $(document).ready(function() {
       mrState = $('.mr-state-widget'),
       mrError = !!mrState.find('.fa-exclamation-triangle').length,
       mrMerged = !!mrState.find('.author_link').length,
-      plus1Target = $('.voting_notes .content-block .awards'),
-      plus1 = $('<div class="award-control btn plus1">+ 1</div>'),
-      mrText = $('.js-main-target-form .js-note-text'),
-      mrForm = mrText.parents('form'),
       branch = $('.mr-source-target .label-branch:first a').html(),
       rootBranch = branch.substring(0, branch.indexOf('/')),
-      jenkinsConst = 'http://ci-platform.sbis.ru/job/branch_' + (document.location.href.indexOf('/ws/data/') !== -1 ? 'ws.data' : document.location.href.indexOf('/sbis/ws') !== -1 ? 'ws' : 'controls')  + '_',
+      isDATA = document.location.href.indexOf('/ws/data/') !== -1,
+      isWS = document.location.href.indexOf('/sbis/ws') !== -1,
+      isENGINE = document.location.href.indexOf('sbis/engine') !== -1,
+      jenkinsConst = 'http://ci-platform.sbis.ru/job/branch_' + (isDATA ? 'ws.data' : isWS ? 'ws' : isENGINE ? 'engine' : 'controls')  + '_',
       jenkinsMiddle = '/job/',
       jenkinsIconConst = '/badge/icon',
       testURL = jenkinsConst + rootBranch + jenkinsMiddle + encodeURIComponent(branch),
@@ -28,12 +27,5 @@ $(document).ready(function() {
    });
       
    $('body').addClass(mrMerged ? 'ws-mr-already-merged' : mrError ? 'ws-mr-not-merged' : 'ws-mr-merged');
-   if (plus1Target.length) {
-      plus1.click(function() {
-         mrText.html('+1');
-         mrForm.submit();
-      });
-      plus1.prependTo(plus1Target);
-   }
    $('<div class="request-tests-block" style="margin: 16px 0;"><img src="http://ci-platform.sbis.ru/static/5661bc22/images/headshot.png" style="height: 24px; vertical-align: top; padding-right: 8px;"><a href="' + testURL + '" style="font-weight: bold; display: inline-block; font-size: 16px; padding-right: 8px;">Jenkins tests</a><img src="' + testIconURL + '" style="display: inline-block; vertical-align: top;"></div>').insertBefore($('.merge-request .mr-state-widget'));
 });
