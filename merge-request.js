@@ -8,7 +8,9 @@ $(document).ready(function() {
       isDATA = document.location.href.indexOf('/ws/data/') !== -1,
       isWS = document.location.href.indexOf('/sbis/ws') !== -1,
       isENGINE = document.location.href.indexOf('sbis/engine') !== -1,
-      jenkinsConst = 'http://ci-platform.sbis.ru/job/branch_' + (isDATA ? 'ws.data' : isWS ? 'ws' : isENGINE ? 'engine' : 'controls')  + '_',
+      isWASABY = document.location.href.indexOf('sbis/wasaby-controls') !== -1,
+      isWS3 = document.location.href.indexOf('sbis/sbis3controls') !== -1,
+      jenkinsConst = 'http://ci-platform.sbis.ru/job/branch_' + (isDATA ? 'ws.data' : isWS ? 'ws' : isENGINE ? 'engine' : isWASABY ? 'wasaby_controls' : isWS3 ? 'sbis3controls' : 'controls')  + '_',
       jenkinsMiddle = '/job/',
       jenkinsIconConst = '/badge/icon',
       testURL = jenkinsConst + rootBranch + jenkinsMiddle + encodeURIComponent(branch),
@@ -18,7 +20,7 @@ $(document).ready(function() {
          document.execCommand('copy');
       })
       .insertBefore('.header-logo .home');
-      
+
    this.addEventListener('copy', function (e) {
       if (e.target.className.indexOf('ws-copy-link') !== -1) {
          e.preventDefault();
@@ -27,5 +29,9 @@ $(document).ready(function() {
    });
       
    $('body').addClass(mrMerged ? 'ws-mr-already-merged' : mrError ? 'ws-mr-not-merged' : 'ws-mr-merged');
-   $('<div class="request-tests-block" style="margin: 16px 0;"><img src="http://ci-platform.sbis.ru/static/5661bc22/images/headshot.png" style="height: 24px; vertical-align: top; padding-right: 8px;"><a href="' + testURL + '" style="font-weight: bold; display: inline-block; font-size: 16px; padding-right: 8px;">Jenkins tests</a><img src="' + testIconURL + '" style="display: inline-block; vertical-align: top;"></div>').insertBefore($('.merge-request .mr-state-widget'));
+   $('<div class="request-tests-block" style="margin: 16px 0;">' +
+       '<img src="http://ci-platform.sbis.ru/static/5661bc22/images/headshot.png" style="height: 24px; vertical-align: top; padding-right: 8px;">' +
+         '<a href="' + testURL + '" style="font-weight: bold; display: inline-block; font-size: 16px; padding-right: 8px;">Jenkins tests</a>' +
+       '<img src="' + testIconURL + '" style="display: inline-block; vertical-align: top;">' +
+     '</div>').insertBefore($('.merge-request .mr-state-widget'));
 });

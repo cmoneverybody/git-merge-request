@@ -1,7 +1,7 @@
 {
-   "manifest_version": 3,
+   "manifest_version": 2,
    "name": "Git merge request",
-   "version": "3",
+   "version": "4",
 
    "icons": {
       "16": "git.png",
@@ -12,14 +12,14 @@
 
    "content_scripts": [
       {
-         "matches": ["https://git.sbis.ru/sbis/controls/merge_requests/*", "https://git.sbis.ru/ws/data/merge_requests/*", "https://git.sbis.ru/sbis/ws/merge_requests/*", "https://git.sbis.ru/sbis/engine/merge_requests/*"],
+         "matches": ["https://git.sbis.ru/sbis/sbis3controls/merge_requests/*",
+            "https://git.sbis.ru/sbis/wasaby-controls/merge_requests/*",
+            "https://git.sbis.ru/sbis/controls/merge_requests/*",
+            "https://git.sbis.ru/ws/data/merge_requests/*",
+            "https://git.sbis.ru/sbis/ws/merge_requests/*",
+            "https://git.sbis.ru/sbis/engine/merge_requests/*"],
          "js": ["jquery-min.js", "merge-request.js"],
-         "css": ["merge-request.css", "main-page.css"]
-      },
-      {
-         "matches": [ "https://git.sbis.ru/"],
-         "js": ["jquery-min.js", "main-page.js"],
-         "css": ["main-page.css"]
+         "css": ["merge-request.css"]
       }
    ],
 
